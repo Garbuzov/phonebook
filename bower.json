@@ -1,0 +1,21 @@
+{
+  "name": "phonebook",
+  "version": "0.0.1",
+  "description": "phonebook app made by backbone",
+  "main": "/index.html",
+  "keywords": [
+    "phonebook"
+  ],
+  "authors": [
+    "Andrey Garbuzov <garbuzzz@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "http://swampfrog.ru",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,253 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: url(bg_noise.jpg) repeat left top;
+  font-size: 14px;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.4);
+}
+.phone-book {
+  width: 500px;
+  margin: 0 auto;
+}
+
+/* Add item */
+.add-item {
+  display: block;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+.add-item span {
+  display: block;
+  color: #fff;
+  line-height: 2em;
+  text-shadow: 0 0 3px rgba(0,0,0,.3);
+}
+.add-name,
+.add-phone {
+  width: 49%;
+  box-sizing: border-box;
+  border: 1px solid #5a5a5a;
+  height: 40px;
+  font-size: 16px;
+  padding: 5px 10px;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+}
+.add-phone {
+  margin-left: 5px;
+}
+.add-name::-webkit-input-placeholder,
+.add-phone::-webkit-input-placeholder{
+  font-style: italic;
+}
+.add-name:-moz-placeholder { /* Firefox 18- */
+  font-style: italic;
+}
+.add-name::-moz-placeholder {  /* Firefox 19+ */
+  font-style: italic;
+}
+.add-name:-ms-input-placeholder {
+  font-style: italic;
+}
+
+.notebook {
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  border-radius: 3px;
+  padding-left: 0;
+  padding-top: 10px;
+  background: #fff8c8;
+}
+
+/* Search */
+.label-search {
+  height: 38px;
+  display: block;
+  padding-left: 10px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.label-search .fa-search {
+  color: #555;
+  font-size: 20px;
+}
+.search {
+  border: none;
+  height: 20px;
+  padding: 5px;
+  display: inline-block;
+  outline: none;
+  background: transparent;
+  color: #555;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  margin-left: 7px;
+}
+.search::-webkit-input-placeholder {
+  color: #666;
+}
+.search:-moz-placeholder { /* Firefox 18- */
+  color: #666;
+}
+.search::-moz-placeholder {  /* Firefox 19+ */
+  color: #666;
+}
+.search:-ms-input-placeholder {
+  color: #666;
+}
+
+
+
+.phone-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+  display: block;
+  border-top: 1px solid #C2B67D;
+}
+.item {
+  margin: 0;
+  padding: 0 0 0 10px;
+  height: 35px;
+  line-height: 26px;
+  position: relative;
+  clear: left;
+}
+.item.hidden {
+  display: none;
+}
+.item-name .edit-name,
+.item-phone .edit-phone {
+  display: none;
+}
+.item-name.edit .name,
+.item-phone.edit .phone {
+  display: none;
+}
+.item-name.edit .edit-name,
+.item-phone.edit .edit-phone {
+  display: block;
+}
+.item + .item {
+  border-top: 1px dashed #C2B67D;
+}
+.item:hover {
+  cursor: text;
+}
+.item-name {
+  display: inline-block;
+  width: 50%;
+  height: 35px;
+  line-height: 35px;
+  font-weight: bold;
+  float: left;
+  padding-left: 10px;
+  border-right: 1px dashed #C2B67D;
+}
+.name {
+  display: inline-block;
+}
+.edit-name {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background: none;
+  width: 100%;
+  border: 0;
+  outline: none;
+  font-weight: bold;
+  box-sizing: border-box;
+  height: 35px;
+  line-height: 35px;
+  font-style: italic;
+}
+.item-phone {
+  display: inline-block;
+  width: 45%;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+.phone {
+  display: inline-block;
+  height: 26px;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+.edit-phone {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background: none;
+  border: 0;
+  outline: none;
+  padding-left: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 35px;
+  line-height: 35px;
+  font-style: italic;
+}
+
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus{
+  border:none;
+  outline:none;
+  color: #484228;
+  font-style: italic;
+}
+.delete.fa {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  text-align: center;
+  display: none;
+  font-size: 18px;
+  line-height: 35px;
+  color: #C7BA7B;
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+.delete.fa:active {
+  color: #B25A00;
+}
+.edit.fa {
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 25px;
+  line-height: 40px;
+  color: #C7BA7B;
+  background: transparent;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 20px;
+  top: 2px;
+}
+.item:hover .delete.fa,
+.item:hover .edit.fa {
+  display: block;
+
+}
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #D0D0D0;
+}
