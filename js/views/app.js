@@ -46,7 +46,7 @@ app.AppView = Backbone.View.extend({
   },
 
   create: function(){
-    if (this.$inputName.val().trim()) {
+    if (this.$inputName.val().trim() !== '') {
       app.List.create(this.newAttributes());
       this.$inputName.val('');
       this.$inputPhone.val('');
@@ -54,7 +54,7 @@ app.AppView = Backbone.View.extend({
   },
 
   createOnEnter: function(event) {
-    if (event.which === ENTER_KEY || this.$inputName.val().trim()) {
+    if (event.which === ENTER_KEY && this.$inputName.val().trim() !== '') {
       this.create();
     }
   },
