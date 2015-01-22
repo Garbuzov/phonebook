@@ -6,6 +6,7 @@ app.AppView = Backbone.View.extend({
 
   events: {
     'keypress #add-item': 'createOnEnter',
+    'click .btn-add' : 'create',
     'keyup #search' : 'filterAll',
     'focusout #search' : 'filterAll'
   },
@@ -44,13 +45,18 @@ app.AppView = Backbone.View.extend({
     }
   },
 
-  createOnEnter: function(event) {
-    if ( event.which !== ENTER_KEY || !this.$inputName.val().trim() ) {
-      return;
-    }
+  create: function(){
     app.List.create( this.newAttributes() );
     this.$inputName.val('');
     this.$inputPhone.val('');
+  },
+
+  createOnEnter: function(event) {
+    if ( event.which !== ENTER_KEY || !this.$inputName.val().trim() ) {
+      return;
+    } else {
+      this.create();
+    }
   },
 
   // New

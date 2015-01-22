@@ -30,18 +30,23 @@ h1 {
   color: #fff;
   line-height: 2em;
   text-shadow: 0 0 3px rgba(0,0,0,.3);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 .add-name,
 .add-phone {
-  width: 49%;
+  width: 44%;
   box-sizing: border-box;
   border: 1px solid #5a5a5a;
   height: 40px;
   font-size: 16px;
+  line-height: 30px;
   padding: 5px 10px;
   display: inline-block;
   outline: none;
   border-radius: 5px;
+  position: relative;
 }
 .add-phone {
   margin-left: 5px;
@@ -50,14 +55,47 @@ h1 {
 .add-phone::-webkit-input-placeholder{
   font-style: italic;
 }
-.add-name:-moz-placeholder { /* Firefox 18- */
+.add-name:-moz-placeholder,
+.add-phone:-moz-placeholder { /* Firefox 18- */
   font-style: italic;
 }
-.add-name::-moz-placeholder {  /* Firefox 19+ */
+.add-name::-moz-placeholder,
+.add-phone::-moz-placeholder {  /* Firefox 19+ */
   font-style: italic;
 }
-.add-name:-ms-input-placeholder {
+.add-name:-ms-input-placeholder,
+.add-phone:-ms-input-placeholder {
   font-style: italic;
+}
+.btn-add {
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  outline: none;
+  position: relative;
+  bottom: -5px;
+  margin-left: 5px;
+  border: 1px solid #327910;
+  border-collapse: collapse;
+  border-radius: 3px;
+  background: #84c170;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+  color: #e7ffe0;
+  line-height: 40px;
+  text-shadow: 0 -1px 0 #327910;
+  background: -moz-linear-gradient(top, #84c170 0%, #398235 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#84c170), color-stop(100%,#398235));
+  background: -webkit-linear-gradient(top, #84c170 0%,#398235 100%);
+  background: -o-linear-gradient(top, #84c170 0%,#398235 100%);
+  background: -ms-linear-gradient(top, #84c170 0%,#398235 100%);
+  background: linear-gradient(to bottom, #84c170 0%,#398235 100%);
+}
+.btn-add.fa {
+  font: normal normal normal 25px/40px FontAwesome;
+}
+.btn-add:active {
+  bottom: -6px;
+  box-shadow: none;
 }
 
 .notebook {
