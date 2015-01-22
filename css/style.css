@@ -162,37 +162,6 @@ h1 {
   position: relative;
   clear: left;
 }
-.item.hidden {
-  display: none;
-}
-.item-name .edit-name,
-.item-phone .edit-phone {
-  display: none;
-}
-.item-name.edit .name,
-.item-phone.edit .phone {
-  display: none;
-}
-.item-name.edit .edit-name,
-.item-phone.edit .edit-phone {
-  display: block;
-}
-.item + .item {
-  border-top: 1px dashed #C2B67D;
-}
-.item:hover {
-  cursor: text;
-}
-.item-name {
-  display: inline-block;
-  width: 50%;
-  height: 35px;
-  line-height: 35px;
-  font-weight: bold;
-  float: left;
-  padding-left: 10px;
-  border-right: 1px dashed #C2B67D;
-}
 .name {
   display: inline-block;
 }
@@ -236,6 +205,39 @@ h1 {
   line-height: 35px;
   font-style: italic;
 }
+
+.item.hidden {
+  display: none;
+}
+.item-name .edit-name,
+.item-phone .edit-phone {
+  display: none;
+}
+.item-name.edit .name,
+.item-phone.edit .phone {
+  display: none;
+}
+.item-name.edit .edit-name,
+.item-phone.edit .edit-phone {
+  display: block;
+}
+.item + .item {
+  border-top: 1px dashed #C2B67D;
+}
+.item:hover {
+  cursor: text;
+}
+.item-name {
+  display: inline-block;
+  width: 50%;
+  height: 35px;
+  line-height: 35px;
+  font-weight: bold;
+  float: left;
+  padding-left: 10px;
+  border-right: 1px dashed #C2B67D;
+}
+
 
 [contenteditable="true"]:active,
 [contenteditable="true"]:focus{

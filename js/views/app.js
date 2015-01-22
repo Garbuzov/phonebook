@@ -54,19 +54,15 @@ app.AppView = Backbone.View.extend({
   },
 
   createOnEnter: function(event) {
-    if ( event.which !== ENTER_KEY || !this.$inputName.val().trim() ) {
-      return;
-    } else {
+    if (event.which === ENTER_KEY || this.$inputName.val().trim()) {
       this.create();
     }
   },
 
-  // New
   filterOne : function (item) {
     item.trigger('visible');
   },
 
-  // New
   filterAll : function () {
     app.List.each(this.filterOne, this);
   }

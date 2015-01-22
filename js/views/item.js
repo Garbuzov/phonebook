@@ -10,8 +10,7 @@ app.ItemView = Backbone.View.extend({
     'dblclick .item-phone': 'editPhone',
     'click .delete': 'remove',
     'keypress': 'updateOnEnter',
-    'blur ': 'close',
-    'focusout' : 'close'
+    'blur': 'close'
   },
 
   initialize: function(){
@@ -49,11 +48,13 @@ app.ItemView = Backbone.View.extend({
   },
 
   editName: function(){
+    console.log('editName');
     this.$itemName.addClass('edit');
     this.$editName.focusEnd();
   },
 
   editPhone: function(){
+    console.log('editName');
     this.$itemPhone.addClass('edit');
     this.$editPhone.focusEnd();
   },
